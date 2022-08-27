@@ -1,0 +1,17 @@
+.logo {
+	color: var(--bc-blue);
+	font-family: "Raleway";
+	font-weight: 700;
+	font-size: 26px;
+	line-height: 1.19;
+	display: inline-block;
+	margin: 0;
+	padding-top: 25px;
+	padding-bottom: 24px;
+}
+.logo--black {
+	color: var(--bc-black);
+}
+.logo--white {
+	color: var(--bc-white);
+}

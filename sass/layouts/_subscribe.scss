@@ -1,0 +1,89 @@
+.sub-box {
+	margin-right: 0;
+	margin-left: auto;
+	padding: 0;
+}
+
+.sub-text {
+	display: inline-block;
+	margin-top: 0;
+	margin-bottom: 20px;
+	padding: 0;
+	font-weight: 700;
+	line-height: 1.15;
+
+	text-transform: uppercase;
+	color: var(--bc-white);
+}
+
+.sub-form {
+	display: flex;
+	gap: 12px;
+}
+
+.sub-field {
+	position: relative;
+}
+
+.sub-input {
+	width: 358px;
+	height: 50px;
+	margin: 0;
+	padding-left: 16px;
+	padding-right: 0;
+	color: var(--bc-white);
+
+	border-radius: 4px;
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	background-color: transparent;
+}
+
+.sub-label {
+	position: absolute;
+	left: 16px;
+	top: 50%;
+	transform: translateY(-50%);
+
+	font-size: 16px;
+	line-height: 1.25;
+	color: var(--bc-semi-white);
+	transition: transform 1000ms var(--timing-function);
+}
+
+.sub-input:focus {
+	border: 1px solid var(--bc-blue);
+	outline: none;
+}
+
+.sub-input:focus + .sub-label,
+.sub-input:not(:placeholder-shown) + .sub-label {
+	transform: translateY(-50%) translateX(279px);
+}
+
+.sub-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+	letter-spacing: 0.06em;
+	color: var(--bc-white);
+
+	width: 200px;
+	height: 50px;
+	margin: 0;
+	padding: 0;
+	background-color: var(--bc-blue);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.sub-button::after {
+	content: "";
+	width: 24px;
+	height: 24px;
+	background-image: url(../images/send.svg);
+	background-size: contain;
+}

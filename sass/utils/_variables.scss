@@ -1,0 +1,31 @@
+:root {
+	/* bc - brand color */
+	--bc-blue: #2196f3;
+	--bc-black: #000000;
+	--bc-light-black: #212121;
+	--bc-gray: #757575;
+	--bc-white: #ffffff;
+	--bc-background: #2f303a;
+	--bc-light_backgroung: #f5f4fa;
+	--bc-header-line: #ececec;
+	--bc-client: #afb1b8;
+
+	--bc-hero-gradient: rgba(47, 48, 58, 0.4);
+	--bc-semi-white: rgb(255 255 255 / 0.6);
+
+	--card-set-gap: 30px;
+
+	--card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+
+	--timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+	--TST1: border-color 2000ms var(--timing-function);
+	--TST2: 1000ms var(--timing-function);
+}
+
+@mixin font($fw, $fs, $lh, $ls) {
+	font-weight: $fw;
+	font-size: $fs;
+	line-height: $lh;
+	letter-spacing: $ls;
+} ;

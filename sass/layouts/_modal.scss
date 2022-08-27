@@ -1,0 +1,232 @@
+.modal {
+	position: absolute;
+	width: 528px;
+
+	top: 50%;
+	left: 50%;
+
+	border-radius: 4px;
+	background-color: var(--bc-white);
+
+	margin: 0;
+	padding: 40px;
+
+	transform: translate(-50%, -50%) scale(1);
+
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
+	transition-property: transform;
+
+	/* prettier-ignore*/
+	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
+				0px 1px 1px rgba(0, 0, 0, 0.14), 
+				0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.close-button {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	width: 30px;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	border-radius: 50%;
+	background-color: #ffffff;
+	border: 1px solid rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
+	transition-property: color;
+}
+
+.icon-close {
+	fill: currentColor;
+}
+
+.close-button:hover,
+.close-button:focus {
+	color: var(--bc-blue);
+}
+
+.modal-descr {
+	display: block;
+	margin-top: 0;
+	margin-bottom: 30px;
+	padding: 0;
+
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 1.15;
+	text-align: center;
+
+	color: var(--bc-light-black);
+}
+
+.field-input {
+	margin: 0;
+	padding: 0 0 0 42px;
+	cursor: pointer;
+	width: 100%;
+	height: 40px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	outline: transparent;
+	transition: border-color 250ms var(--timing-function);
+	/* transition: border-color var(--TST2); */
+}
+
+.field-input:focus {
+	border-color: var(--bc-blue);
+}
+
+.form-field:focus-within .form-ico {
+	fill: var(--bc-blue);
+}
+
+/* .field-input:focus ~ .form-ico {
+	fill: var(--bc-blue);
+} */
+
+.form-ico {
+	position: absolute;
+	top: 50%;
+	left: 12px;
+	transform: translateY(-50%);
+
+	width: 18px;
+	height: 18px;
+	fill: var(--bc-light-black);
+	transition: fill 250ms var(--timing-function);
+}
+
+.form-field {
+	position: relative;
+	display: block;
+	margin-top: 0;
+	margin-bottom: 28px;
+	padding: 0;
+}
+
+.field-label {
+	position: absolute;
+	top: -18px;
+	left: 0;
+
+	margin: 0;
+	padding: 0;
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.01em;
+	color: var(--bc-gray);
+}
+
+.comment-field {
+	resize: none;
+	width: 100%;
+	height: 120px;
+	margin: 0;
+	padding: 12px 16px;
+	cursor: pointer;
+	width: 100%;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	outline: transparent;
+	transition: border-color 250ms var(--timing-function);
+}
+
+.comment {
+	margin-bottom: 20px;
+}
+
+.comment-field:focus {
+	border-color: var(--bc-blue);
+}
+
+.comment-field::placeholder {
+	font-size: 12px;
+	line-height: 1.17;
+	letter-spacing: 0.01em;
+	color: rgba(117, 117, 117, 0.5);
+}
+
+.agree-label {
+	position: relative;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 0;
+	margin-bottom: 30px;
+	padding: 0;
+}
+
+.icon-box {
+	position: absolute;
+	top: 50%;
+	left: 12px;
+	transform: translateY(-50%);
+
+	width: 16px;
+	height: 15px;
+	border: 2px solid var(--bc-light-black);
+	border-radius: 2px;
+	color: var(--bc-white);
+
+	/* prettier-ignore*/
+	transition: background-color, 	250ms	var(--timing-function), 
+				border-color, 		250ms	var(--timing-function);
+}
+
+.icon-agree {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+	width: 16px;
+	height: 15px;
+	fill: var(--bc-white);
+}
+
+.agree-checkbox:checked + .icon-box {
+	background-color: var(--bc-blue);
+	border-color: transparent;
+}
+
+.agree-checkbox:focus + .icon-box {
+	border-color: var(--bc-blue);
+}
+
+.agree-text {
+	line-height: 1.71;
+	color: #757575;
+}
+
+.agree-link {
+	color: var(--bc-blue);
+}
+
+.send-button {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 1.88;
+	letter-spacing: 0.06em;
+	color: var(--bc-white);
+
+	width: 200px;
+	height: 50px;
+	margin: 0 auto;
+	padding: 0;
+	background-color: var(--bc-blue);
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}

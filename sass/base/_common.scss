@@ -1,0 +1,50 @@
+img {
+	display: block;
+}
+
+ul,
+ol {
+	margin: 0;
+	padding-left: 0;
+}
+
+a {
+	color: currentColor;
+}
+body {
+	color: var(--bc-gray);
+	background-color: var(--bc-white);
+	font-family: Roboto, sans-serif;
+	font-size: 14px;
+	letter-spacing: 0.03em;
+}
+
+.link {
+	text-decoration: none;
+}
+.list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.transition {
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
+}
+
+.color {
+	transition-property: color;
+}
+
+.background-color {
+	transition-property: background-color;
+}
+
+.fill {
+	transition-property: fill;
+}
+
+.border-color {
+	transition-property: border-color;
+}
