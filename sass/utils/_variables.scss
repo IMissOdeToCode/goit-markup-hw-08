@@ -1,4 +1,6 @@
 :root {
+	// breakpoints
+
 	/* bc - brand color */
 	--bc-blue: #2196f3;
 	--bc-black: #000000;
@@ -22,6 +24,10 @@
 	--TST1: border-color 2000ms var(--timing-function);
 	--TST2: 1000ms var(--timing-function);
 }
+
+$mobile: 480px;
+$tablet: 768px;
+$desktop: 1200px;
 
 @mixin font($fw, $fs, $lh, $ls) {
 	font-weight: $fw;
