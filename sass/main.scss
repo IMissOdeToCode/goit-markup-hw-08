@@ -9,14 +9,15 @@
 
 // @import "./base/current-tab";
 
-// @import "./utils/_hidden";
+@import "./utils/_hidden";
 // @import "./components/logo";
 
 /* ---------- Studio ---------- */
 // @import "./layouts/header";
 @import "./layouts/hero";
-// @import "./layouts/features";
-// @import "./layouts/service";
+@import "./layouts/features";
+@import "./layouts/service";
+
 // @import "./layouts/our-team";
 // @import "./layouts/our-clients";
 // @import "./layouts/footer";

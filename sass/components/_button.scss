@@ -7,9 +7,15 @@
 
 	border-radius: 4px;
 	font-family: inherit;
+
 	border-width: 1px;
 	border-style: solid;
 	border-color: transparent;
+
+	outline-width: 3px;
+	outline-style: solid;
+	outline-color: transparent;
+
 	cursor: pointer;
 
 	color: var(--bc-white);
