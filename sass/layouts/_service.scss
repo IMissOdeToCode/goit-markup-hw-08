@@ -1,3 +1,18 @@
+.ggg {
+	display: none;
+	padding-bottom: 94px;
+
+	@media screen and (min-width: $desktop) {
+		display: block;
+		width: $desktop;
+	}
+}
+
+.ggg_ttt {
+	display: block;
+	margin: 0 auto;
+}
+
 .section-title {
 	color: var(--bc-light-black);
 	font-weight: 700;
