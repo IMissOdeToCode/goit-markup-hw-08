@@ -34,4 +34,24 @@ $desktop: 1200px;
 	font-size: $fs;
 	line-height: $lh;
 	letter-spacing: $ls;
+}
+
+// screen type
+
+@mixin normal {
+	/* prettier-ignore*/
+	@media 	(min-device-pixel-ratio: 1), 
+			(min-resolution: 96dpi), 
+			(min-resolution: 1dppx) {
+				@content;	
+	}
+}
+
+@mixin retina {
+	/* prettier-ignore*/
+	@media 	(min-device-pixel-ratio: 2), 
+			(min-resolution: 192dpi), 
+			(min-resolution: 2dppx) {
+				@content;	
+	}
 } ;
