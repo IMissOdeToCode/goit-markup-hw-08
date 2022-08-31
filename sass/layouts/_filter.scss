@@ -36,10 +36,15 @@
 
 	margin-bottom: 40px;
 
+	@media screen and (max-width: ($tablet - 1px)) {
+		max-width: 440px;
+	}
+
 	@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
 		justify-content: center;
 		margin-bottom: 30px;
 	}
+
 	@media screen and (min-width: $desktop) {
 		justify-content: center;
 		margin-bottom: 50px;
@@ -49,7 +54,7 @@
 .filter__item:nth-child(3) {
 	// outline: 1px solid salmon;
 	@media screen and (min-width: 370px) and (max-width: ($tablet - 1px)) {
-		width: 123px;
+		// width: 123px;
 	}
 }
 
