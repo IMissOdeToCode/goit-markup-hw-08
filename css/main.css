@@ -22,7 +22,10 @@ h6 {
   --bc-hero-gradient: rgba(47, 48, 58, 0.4);
   --bc-semi-white: rgb(255 255 255 / 0.6);
   --card-set-gap: 30px;
-  --card-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  /* prettier-ignore*/
+  --card-shadow:	0px 1px 3px rgba(0, 0, 0, 0.12),
+  				0px 1px 1px rgba(0, 0, 0, 0.14),
+  				0px 2px 1px rgba(0, 0, 0, 0.2);
   --timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   --TST1: border-color 2000ms var(--timing-function);
   --TST2: 1000ms var(--timing-function);
@@ -724,4 +727,193 @@ body {
   height: 60px;
 }
 
-/* ---------- Portfolio ---------- *//*# sourceMappingURL=main.css.map */
+/* ---------- Portfolio ---------- */
+.portfolio {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  min-width: 230px;
+}
+@media screen and (min-width: 1200px) {
+  .portfolio {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.portfolio__container {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+@media screen and (max-width: 479px) {
+  .portfolio__container {
+    width: 100%;
+  }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+  .portfolio__container {
+    width: 480px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .portfolio__container {
+    width: 768px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .portfolio__container {
+    width: 1200px;
+  }
+}
+
+.filter {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 8px;
+  row-gap: 15px;
+  margin-bottom: 40px;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .filter {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .filter {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (min-width: 370px) and (max-width: 767px) {
+  .filter__item:nth-child(3) {
+    width: 123px;
+  }
+}
+
+.filter__button {
+  color: var(--bc-light-black);
+  background-color: var(--bc-light_backgroung);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.625;
+  text-align: center;
+  letter-spacing: 0.03em;
+  padding: 6px 22px;
+  min-width: 73px;
+  min-height: 38px;
+  /* prettier-ignore*/
+  transition-property: color, background-color, box-shadow;
+}
+.filter__button:hover, .filter__button:focus {
+  color: var(--bc-white);
+  background-color: var(--bc-blue);
+  /* prettier-ignore*/
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+  outline: transparent;
+}
+
+.gallery-container {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.result__set {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -15px;
+}
+
+.result__item {
+  margin: 15px;
+  flex-basis: 100%;
+}
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .result__item {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .result__item {
+    flex-basis: calc((100% - 90px) / 3);
+  }
+}
+
+.result__link {
+  display: block;
+  transition-property: box-shadow;
+}
+.result__link:hover, .result__link:focus {
+  outline: transparent;
+  /* prettier-ignore*/
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
+.result__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.pop-up {
+  position: absolute;
+  overflow: auto;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  transition-property: transform;
+}
+.result__link:hover .pop-up, .result__link:focus .pop-up {
+  transform: translateY(0);
+}
+
+.pop-up__text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin: 0;
+  padding: 63px 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  color: #ffffff;
+  background: rgba(33, 150, 243, 0.9);
+}
+
+.result__descr {
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .result__descr--high {
+    height: 147px;
+  }
+}
+
+.result__header {
+  color: var(--bc-light-black);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.result__text {
+  color: var(--bc-gray);
+  font-size: 16px;
+  line-height: 1.88;
+  margin-top: 4px;
+  margin-bottom: 0;
+}/*# sourceMappingURL=main.css.map */
