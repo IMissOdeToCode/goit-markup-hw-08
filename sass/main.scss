@@ -10,7 +10,7 @@
 // @import "./base/current-tab";
 
 @import "./utils/_hidden";
-// @import "./components/logo";
+@import "./components/logo";
 
 /* ---------- Studio ---------- */
 // @import "./layouts/header";
@@ -20,8 +20,8 @@
 @import "./layouts/team";
 @import "./layouts/clients";
 
-// @import "./layouts/footer";
-// @import "./layouts/subscribe";
+@import "./layouts/footer";
+@import "./layouts/subscribe";
 
 /* ---------- Portfolio ---------- */
 @import "./layouts/filter";

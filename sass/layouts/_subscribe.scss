@@ -1,36 +1,65 @@
-.sub-box {
-	margin-right: 0;
-	margin-left: auto;
-	padding: 0;
+.footer__sub-block {
+	text-align: center;
+	flex-basis: 100%;
+
+	@media screen and (min-width: $desktop) {
+		text-align: start;
+		flex-basis: auto;
+	}
 }
 
-.sub-text {
+.footer__sub-header {
 	display: inline-block;
 	margin-top: 0;
 	margin-bottom: 20px;
 	padding: 0;
-	font-weight: 700;
-	line-height: 1.15;
 
+	@include font(700, 14px, 1.15, 0.03em);
 	text-transform: uppercase;
 	color: var(--bc-white);
 }
 
-.sub-form {
+.footer__sub-form {
 	display: flex;
-	gap: 12px;
+	align-items: center;
+	width: 100%;
+
+	@media screen and (max-width: ($desktop - 1px)) {
+		flex-direction: column;
+		row-gap: 20px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		flex-direction: row;
+		column-gap: 12px;
+	}
 }
 
-.sub-field {
+.footer__sub-field {
 	position: relative;
+
+	@media screen and (max-width: ($mobile - 1px)) {
+		width: 100%;
+	}
+	@media screen and (min-width: $mobile) and (max-width: ($tablet - 1px)) {
+		width: 450px;
+	}
+	@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+		width: 450px;
+	}
+	@media screen and (min-width: $desktop) {
+		width: 358px;
+	}
 }
 
-.sub-input {
-	width: 358px;
-	height: 50px;
+.footer__sub-input {
 	margin: 0;
 	padding-left: 16px;
 	padding-right: 0;
+
+	width: 100%;
+	height: 50px;
+
 	color: var(--bc-white);
 
 	border-radius: 4px;
@@ -38,7 +67,7 @@
 	background-color: transparent;
 }
 
-.sub-label {
+.footer__sub-label {
 	position: absolute;
 	left: 16px;
 	top: 50%;
@@ -50,14 +79,24 @@
 	transition: transform 1000ms var(--timing-function);
 }
 
-.sub-input:focus {
+.footer__sub-input:focus {
 	border: 1px solid var(--bc-blue);
 	outline: none;
 }
 
-.sub-input:focus + .sub-label,
-.sub-input:not(:placeholder-shown) + .sub-label {
-	transform: translateY(-50%) translateX(279px);
+.footer__sub-input:focus + .footer__sub-label,
+.footer__sub-input:not(:placeholder-shown) + .footer__sub-label {
+	@media screen and (max-width: ($mobile - 1px)) {
+		transform: translateY(-50%) translateX(167px);
+	}
+
+	@media screen and (min-width: $mobile) and (max-width: ($desktop - 1px)) {
+		transform: translateY(-50%) translateX(371px);
+	}
+
+	@media screen and (min-width: $desktop) {
+		transform: translateY(-50%) translateX(279px);
+	}
 }
 
 .sub-button {
@@ -65,17 +104,14 @@
 	justify-content: center;
 	align-items: center;
 	gap: 10px;
-
-	font-weight: 700;
-	font-size: 16px;
-	line-height: 1.88;
-	letter-spacing: 0.06em;
-	color: var(--bc-white);
-
 	width: 200px;
 	height: 50px;
 	margin: 0;
 	padding: 0;
+
+	@include font(700, 16px, 1.88, 0.06em);
+	color: var(--bc-white);
+
 	background-color: var(--bc-blue);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }

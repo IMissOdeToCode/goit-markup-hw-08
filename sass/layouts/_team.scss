@@ -1,7 +1,7 @@
 .team {
 	padding-top: 60px;
 	padding-bottom: 60px;
-	min-width: 230px;
+	min-width: $smol;
 
 	background-color: var(--bc-light_backgroung);
 
@@ -134,33 +134,4 @@
 	.team__link:focus & {
 		fill: var(--bc-white);
 	}
-}
-
-// repeat in footer
-.round-link {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	color: var(--bc-client);
-	width: 44px;
-	height: 44px;
-	border-radius: 50%;
-	background-color: var(--bc-white);
-	outline: transparent;
-	transition-property: background-color;
-}
-
-.round-link:hover,
-.round-link:focus {
-	background-color: var(--bc-blue);
-}
-
-.round-link:hover .logo-social,
-.round-link:focus .logo-social {
-	fill: var(--bc-white);
-}
-
-.logo-social {
-	fill: currentColor;
-	transition-property: fill;
 }
