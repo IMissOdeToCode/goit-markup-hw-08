@@ -1414,7 +1414,7 @@ nav {
   }
 }
 
-.close-button {
+.modal-close-button {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -1635,6 +1635,125 @@ nav {
   padding: 0;
   background-color: var(--bc-blue);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+.menu-container {
+  position: fixed;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 48px 40px;
+  width: 480px;
+  height: 796px;
+  overflow: auto;
+  transform: translateX(100%);
+  background-color: var(--bc-white);
+}
+
+.mobile__page-link-item {
+  width: 70%;
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 1.175;
+  letter-spacing: 0.02em;
+  color: var(--bc-light-black);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  transition-property: color;
+}
+.mobile__page-link-item:hover, .mobile__page-link-item:focus {
+  color: var(--bc-blue);
+}
+
+.mobile-page-link-area {
+  display: block;
+  margin: 0;
+  padding: 32px 0;
+}
+
+.mobile__menu-footer {
+  margin-top: auto;
+}
+
+.mobile__contact-link-block {
+  margin-bottom: 48px;
+}
+
+.mobile__contact-tel-item {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--bc-blue);
+}
+
+.mobile__contact-email-item {
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: var(--bc-gray);
+}
+
+.contact-link-area {
+  display: block;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+.mobile__social-set {
+  display: flex;
+  gap: 20px;
+}
+
+.vl::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -10px;
+  display: block;
+  width: 1px;
+  height: 22px;
+  border: 1px solid rgba(33, 33, 33, 0.2);
+  background-color: rgba(33, 33, 33, 0.2);
+}
+
+.mobile__social-item {
+  position: relative;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: var(--bc-blue);
+}
+
+.menu-toggle {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  color: var(--bc-light-black);
+  background-color: transparent;
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  transition-property: color;
+}
+.menu-toggle:hover, .menu-toggle:focus {
+  color: var(--bc-blue);
+}
+
+.icon-menu-close {
+  fill: currentColor;
 }
 
 /* ---------- sketch ---------- */
