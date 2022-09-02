@@ -1,18 +1,16 @@
 .modal {
 	position: absolute;
-	width: 528px;
-
 	top: 50%;
 	left: 50%;
-
-	border-radius: 4px;
-	background-color: var(--bc-white);
+	min-width: $smol;
 
 	margin: 0;
 	padding: 40px;
 
-	transform: translate(-50%, -50%) scale(1);
+	border-radius: 4px;
+	background-color: var(--bc-white);
 
+	transform: translate(-50%, -50%) scale(1);
 	transition-duration: 250ms;
 	transition-timing-function: var(--timing-function);
 	transition-property: transform;
@@ -21,6 +19,18 @@
 	box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 
 				0px 1px 1px rgba(0, 0, 0, 0.14), 
 				0px 2px 1px rgba(0, 0, 0, 0.2);
+
+	@media screen and (max-width: ($mobile - 1px)) {
+		width: 100%;
+	}
+
+	@media screen and (min-width: $mobile) and (max-width: ($desktop - 1px)) {
+		width: $mobile - 30px;
+	}
+
+	@media screen and (min-width: $desktop) {
+		width: 528px;
+	}
 }
 
 .close-button {
@@ -78,7 +88,6 @@
 	border-radius: 4px;
 	outline: transparent;
 	transition: border-color 250ms var(--timing-function);
-	/* transition: border-color var(--TST2); */
 }
 
 .field-input:focus {
@@ -160,16 +169,22 @@
 
 	display: flex;
 	justify-content: center;
+	justify-content: flex-start;
 	align-items: center;
 	margin-top: 0;
 	margin-bottom: 30px;
-	padding: 0;
+
+	padding-left: 25px;
+	@media screen and (min-width: $desktop) {
+		padding-left: 37px;
+	}
 }
 
 .icon-box {
 	position: absolute;
 	top: 50%;
 	left: 12px;
+	left: 0px;
 	transform: translateY(-50%);
 
 	width: 16px;
@@ -181,12 +196,17 @@
 	/* prettier-ignore*/
 	transition: background-color, 	250ms	var(--timing-function), 
 				border-color, 		250ms	var(--timing-function);
+
+	@media screen and (min-width: $desktop) {
+		left: 12px;
+	}
 }
 
 .icon-agree {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+
 	transform: translate(-50%, -50%);
 
 	width: 16px;
@@ -204,12 +224,33 @@
 }
 
 .agree-text {
-	line-height: 1.71;
-	color: #757575;
+	display: inline-block;
+	// word-break: break-all;
+	font-size: 12px;
+	line-height: 1.16;
+
+	@media screen and (min-width: $desktop) {
+		font-size: inherit;
+		line-height: 1.71;
+	}
 }
 
 .agree-link {
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	// width: 200px;
+	// word-break: break-all;
+	// word-wrap: break-word;
+
 	color: var(--bc-blue);
+	font-size: 12px;
+	line-height: 1.16;
+
+	@media screen and (min-width: $desktop) {
+		font-size: inherit;
+		line-height: 1.71;
+	}
 }
 
 .send-button {

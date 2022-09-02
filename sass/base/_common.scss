@@ -22,6 +22,8 @@ body {
 	font-family: Roboto, sans-serif;
 	font-size: 14px;
 	letter-spacing: 0.03em;
+
+	min-width: $smol;
 }
 
 .link {
@@ -40,17 +42,17 @@ body {
 
 // check it out
 .color {
-	transition-property: color;
+	// transition-property: color;
 }
 
 .background-color {
-	transition-property: background-color;
+	// transition-property: background-color;
 }
 
 .fill {
-	transition-property: fill;
+	// transition-property: fill;
 }
 
 .border-color {
-	transition-property: border-color;
+	// transition-property: border-color;
 }

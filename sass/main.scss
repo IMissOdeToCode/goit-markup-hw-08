@@ -7,13 +7,13 @@
 
 // @import "./components/section";
 
-// @import "./base/current-tab";
+@import "./base/current-tab";
 
 @import "./utils/_hidden";
 @import "./components/logo";
 
 /* ---------- Studio ---------- */
-// @import "./layouts/header";
+@import "./layouts/header";
 @import "./layouts/hero";
 @import "./layouts/features";
 @import "./layouts/service";
@@ -26,5 +26,8 @@
 /* ---------- Portfolio ---------- */
 @import "./layouts/filter";
 @import "./layouts/filter-result";
-// @import "./layouts/backdrop";
-// @import "./layouts/modal";
+@import "./layouts/backdrop";
+@import "./layouts/modal";
+
+/* ---------- sketch ---------- */
+@import "./layouts/sketch";
