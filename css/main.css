@@ -146,6 +146,7 @@ body {
 }
 
 .header__container {
+  position: relative;
   display: flex;
   margin: 0 auto;
   padding-left: 15px;
@@ -191,7 +192,12 @@ nav {
 
 .header__logo-area {
   display: block;
-  padding: 24px 0;
+  padding: 16px 0;
+}
+@media screen and (min-width: 768px) {
+  .header__logo-area {
+    padding: 24px 0;
+  }
 }
 
 .header__page-link-block {
@@ -295,6 +301,8 @@ nav {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  /* prettier-ignore*/
+  background-image: linear-gradient(to right, var(--bc-hero-gradient), var(--bc-hero-gradient)), url(../images/hero/hero-desktop-1x.jpg);
 }
 @media screen and (max-width: 479px) {
   .background {
@@ -1646,10 +1654,17 @@ nav {
   margin: 0 auto;
   padding: 48px 40px;
   width: 480px;
-  height: 796px;
+  height: 100vh;
   overflow: auto;
-  transform: translateX(100%);
   background-color: var(--bc-white);
+  transform: translateX(100%);
+  transition-duration: 250ms;
+  transition-timing-function: var(--timing-function);
+  transition-property: transform;
+}
+
+.is-open {
+  transform: translateX(0);
 }
 
 .mobile__page-link-item {
@@ -1750,6 +1765,11 @@ nav {
 }
 .menu-toggle:hover, .menu-toggle:focus {
   color: var(--bc-blue);
+}
+@media screen and (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
 }
 
 .icon-menu-close {

@@ -28,6 +28,12 @@
 		<!--navigation-->
 		<header class="header">
 			<div class="header__container main-nav">
+				<button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+					<svg class="icon-menu-close" width="40px" height="40px">
+						<use href="./images/icons.svg#mobile-menu-40"></use>
+					</svg>
+				</button>
+
 				<nav>
 					<!-- prettier-ignore -->
 					<div class="header__logo-block ">
@@ -213,5 +219,64 @@
 				</div>
 			</div>
 		</footer>
+
+		<!-- mobile-menu -->
+
+		<div class="menu-container js-menu-container" id="mobile-menu">
+			<button class="menu-toggle js-close-menu" type="button">
+				<svg class="icon-menu-close" width="40px" height="40px">
+					<use href="./images/icons.svg#close-40"></use>
+				</svg>
+			</button>
+
+			<ul class="mobile__page-link-block list">
+				<li class="mobile__page-link-item">
+					<a href="./index.html" class="mobile-page-link-area link" target="_self" rel="noopener noreferrer nofolow">Студія</a>
+				</li>
+				<li class="mobile__page-link-item">
+					<a href="./portfolio.html" class="mobile-page-link-area link" target="_self" rel="noopener noreferrer nofolow">Портфоліо</a>
+				</li>
+				<li class="mobile__page-link-item">
+					<a href="./sketch.html" class="mobile-page-link-area link" target="_self" rel="noopener noreferrer nofolow">Контакти</a>
+				</li>
+			</ul>
+
+			<div class="mobile__menu-footer">
+				<ul class="mobile__contact-link-block list">
+					<li class="mobile__contact-tel-item">
+						<a href="tel:+380961111111" class="contact-link-area link">+38 096 111 11 11</a>
+					</li>
+
+					<li class="mobile__contact-email-item">
+						<a href="mailto:info@devstudio.com" class="contact-link-area link">info@devstudio.com</a>
+					</li>
+				</ul>
+
+				<ul class="mobile__social-set list">
+					<!-- prettier-ignore -->
+					<li class="mobile__social-item">
+						<a href="https://www.instagram.com/" class="mobile__social-link link" target="_self" rel="noopener noreferrer nofolow">Instagram</a>
+					</li>
+
+					<li class="mobile__social-item">
+						<a href="https://twitter.com/" class="mobile__social-link vl link" target="_self" rel="noopener noreferrer nofolow">Twitter</a>
+					</li>
+
+					<li class="mobile__social-item">
+						<a href="https://www.facebook.com/" class="mobile__social-link vl link" target="_self" rel="noopener noreferrer nofolow">Facebook</a>
+					</li>
+
+					<li class="mobile__social-item">
+						<a href="https://www.linkedin.com/" class="mobile__social-link vl link" target="_self" rel="noopener noreferrer nofolow">LinkedIn</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!-- prettier-ignore -->
+		<script defer 	src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+						integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+						crossorigin="anonymous">
+		</script>
+		<script defer src="js/mobile-menu.js"></script>
 	</body>
 </html>

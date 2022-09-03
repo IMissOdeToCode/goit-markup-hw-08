@@ -5,6 +5,7 @@
 }
 
 .header__container {
+	position: relative;
 	display: flex;
 	margin: 0 auto;
 	padding-left: 15px;
@@ -43,7 +44,11 @@ nav {
 
 .header__logo-area {
 	display: block;
-	padding: 24px 0;
+	padding: 16px 0;
+
+	@media screen and (min-width: $tablet) {
+		padding: 24px 0;
+	}
 }
 
 .header__page-link-block {
@@ -127,6 +132,7 @@ nav {
 .header__contact-link-area--bot {
 	padding-top: 5px;
 	padding-bottom: 19px;
+
 	@media screen and (min-width: $desktop) {
 		padding-top: 32px;
 		padding-bottom: 32px;

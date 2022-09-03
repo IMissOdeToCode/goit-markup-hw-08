@@ -10,12 +10,20 @@
 	padding: 48px 40px;
 
 	width: 480px;
-	// height: 100vh;
-	height: 796px;
+	height: 100vh;
+	// height: 796px;
 	overflow: auto;
+	background-color: var(--bc-white);
+
 	transform: translateX(100%);
 
-	background-color: var(--bc-white);
+	transition-duration: 250ms;
+	transition-timing-function: var(--timing-function);
+	transition-property: transform;
+}
+
+.is-open {
+	transform: translateX(0);
 }
 
 .mobile__page-link-block {
@@ -120,6 +128,10 @@
 	&:hover,
 	&:focus {
 		color: var(--bc-blue);
+	}
+
+	@media screen and (min-width: $tablet) {
+		display: none;
 	}
 }
 

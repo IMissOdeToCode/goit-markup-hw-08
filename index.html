@@ -28,6 +28,12 @@
 		<!--navigation-->
 		<header class="header">
 			<div class="header__container main-nav">
+				<button class="menu-toggle js-open-menu" aria-expanded="false" aria-controls="mobile-menu">
+					<svg class="icon-menu-close" width="40px" height="40px">
+						<use href="./images/icons.svg#mobile-menu-40"></use>
+					</svg>
+				</button>
+
 				<nav>
 					<!-- prettier-ignore -->
 					<div class="header__logo-block ">
@@ -623,10 +629,10 @@
 			</div>
 		</div>
 
-		<!--  -->
+		<!-- form-data-script -->
 		<script src="./js/modal.js"></script>
 
-		<!-- <script>
+		<script>
 			(() => {
 				document.querySelector(".js-speaker-form").addEventListener("submit", e => {
 					e.preventDefault();
@@ -634,7 +640,7 @@
 					new FormData(e.currentTarget).forEach((value, name) => console.log(`${name}: ${value}`));
 				});
 			})();
-		</script> -->
+		</script>
 
 		<!-- mobile-menu -->
 
@@ -688,7 +694,11 @@
 				</ul>
 			</div>
 		</div>
-
-		<button class="burger"></button>
+		<!-- prettier-ignore -->
+		<script defer 	src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+						integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+						crossorigin="anonymous">
+		</script>
+		<script defer src="js/mobile-menu.js"></script>
 	</body>
 </html>
