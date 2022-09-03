@@ -91,14 +91,26 @@
 	padding-bottom: 20px;
 }
 
+.t__box {
+	display: flex;
+	flex-direction: column;
+
+	padding-left: 24px;
+	padding-right: 24px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: rgb(253, 126, 126);
+}
+
 .t__content {
 	flex-grow: 1;
+	background-color: rgb(153, 247, 247);
 }
 
 .result__descr--high {
 	// flex-grow: 1;
 	@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
-		height: 147px;
+		// height: 147px;
 	}
 }
 

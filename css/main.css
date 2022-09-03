@@ -56,7 +56,7 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
-  min-width: 320px;
+  min-width: 300px;
 }
 
 .link {
@@ -72,6 +72,10 @@ body {
 .transition {
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
+}
+
+.none {
+  display: none;
 }
 
 .button {
@@ -1172,7 +1176,7 @@ nav {
 .portfolio {
   padding-top: 60px;
   padding-bottom: 60px;
-  min-width: 320px;
+  min-width: 300px;
 }
 @media screen and (min-width: 1200px) {
   .portfolio {
@@ -1341,14 +1345,19 @@ nav {
   padding-bottom: 20px;
 }
 
-.t__content {
-  flex-grow: 1;
+.t__box {
+  display: flex;
+  flex-direction: column;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgb(253, 126, 126);
 }
 
-@media screen and (min-width: 768px) and (max-width: 1199px) {
-  .result__descr--high {
-    height: 147px;
-  }
+.t__content {
+  flex-grow: 1;
+  background-color: rgb(153, 247, 247);
 }
 
 .result__header {
@@ -1375,7 +1384,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  min-width: 320px;
+  min-width: 300px;
   background-color: rgba(0, 0, 0, 0.2);
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
@@ -1398,7 +1407,7 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 320px;
+  min-width: 300px;
   margin: 0;
   padding: 40px;
   border-radius: 4px;
@@ -1653,7 +1662,7 @@ nav {
   position: fixed;
   top: 0;
   right: 0;
-  min-width: 320px;
+  min-width: 300px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
@@ -1782,14 +1791,15 @@ nav {
 }
 
 /* ---------- sketch ---------- */
-* {
-  box-sizing: border-box;
+.s__set {
+  display: flex;
+  justify-content: center;
 }
 
 .s__card {
   display: flex;
   flex-direction: column;
-  flex-basis: 320px;
+  flex-basis: 200px;
   margin: 8px;
   padding: 10px;
   background-color: #fff;

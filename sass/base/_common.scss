@@ -40,6 +40,10 @@ body {
 	transition-timing-function: var(--timing-function);
 }
 
+.none {
+	display: none;
+}
+
 // check it out
 .color {
 	// transition-property: color;
