@@ -22,8 +22,12 @@
 		flex-basis: calc((100% - 3 * 30px) / 3);
 	}
 }
+
 .result__link {
-	display: block;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+
 	transition-property: box-shadow;
 
 	&:hover,
@@ -79,7 +83,9 @@
 .result__descr {
 	display: flex;
 	flex-direction: column;
-	flex-basis: 354px;
+	// flex-basis: 354px;
+
+	flex-grow: 1;
 
 	border-left: 1px solid #eeeeee;
 	border-right: 1px solid #eeeeee;
@@ -89,22 +95,6 @@
 	padding-right: 24px;
 	padding-top: 20px;
 	padding-bottom: 20px;
-}
-
-.t__box {
-	display: flex;
-	flex-direction: column;
-
-	padding-left: 24px;
-	padding-right: 24px;
-	padding-top: 20px;
-	padding-bottom: 20px;
-	background-color: rgb(253, 126, 126);
-}
-
-.t__content {
-	flex-grow: 1;
-	background-color: rgb(153, 247, 247);
 }
 
 .result__descr--high {
