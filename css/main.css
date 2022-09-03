@@ -56,7 +56,7 @@ body {
   font-family: Roboto, sans-serif;
   font-size: 14px;
   letter-spacing: 0.03em;
-  min-width: 480px;
+  min-width: 276px;
 }
 
 .link {
@@ -1172,7 +1172,7 @@ nav {
 .portfolio {
   padding-top: 60px;
   padding-bottom: 60px;
-  min-width: 230px;
+  min-width: 276px;
 }
 @media screen and (min-width: 1200px) {
   .portfolio {
@@ -1257,6 +1257,7 @@ nav {
 .gallery-container {
   margin-left: auto;
   margin-right: auto;
+  width: 100%;
 }
 
 .result__set {
@@ -1268,6 +1269,7 @@ nav {
 .result__item {
   margin: 15px;
   flex-basis: 100%;
+  overflow: hidden;
 }
 @media screen and (min-width: 768px) and (max-width: 1199px) {
   .result__item {
@@ -1292,6 +1294,8 @@ nav {
 
 .result__thumb {
   position: relative;
+  display: flex;
+  justify-content: center;
   overflow: hidden;
 }
 
@@ -1371,7 +1375,7 @@ nav {
   left: 0;
   width: 100%;
   height: 100%;
-  min-width: 480px;
+  min-width: 276px;
   background-color: rgba(0, 0, 0, 0.2);
   transition-duration: 250ms;
   transition-timing-function: var(--timing-function);
@@ -1394,7 +1398,7 @@ nav {
   position: absolute;
   top: 50%;
   left: 50%;
-  min-width: 480px;
+  min-width: 276px;
   margin: 0;
   padding: 40px;
   border-radius: 4px;
@@ -1649,11 +1653,12 @@ nav {
   position: fixed;
   top: 0;
   right: 0;
+  min-width: 276px;
   display: flex;
   flex-direction: column;
   margin: 0 auto;
   padding: 48px 40px;
-  width: 480px;
+  width: 100vw;
   height: 100vh;
   overflow: auto;
   background-color: var(--bc-white);

@@ -1,6 +1,7 @@
 .gallery-container {
 	margin-left: auto;
 	margin-right: auto;
+	width: 100%;
 }
 
 .result__set {
@@ -12,6 +13,7 @@
 .result__item {
 	margin: 15px;
 	flex-basis: 100%;
+	overflow: hidden;
 
 	@media screen and (min-width: $tablet) and (max-width: ($desktop - 1px)) {
 		flex-basis: calc((100% - 2 * 30px) / 2);
@@ -37,6 +39,8 @@
 
 .result__thumb {
 	position: relative;
+	display: flex;
+	justify-content: center;
 	overflow: hidden;
 }
 
